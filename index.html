@@ -21,7 +21,7 @@
         Dynamsoft.DBR.BarcodeReader.license = 'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAwOTMzOTA2LVRYbFhaV0pRY205cSIsIm9yZ2FuaXphdGlvbklEIjoiMTAwOTMzOTA2In0=';
         (async()=>{
             let scanner = await Dynamsoft.DBR.BarcodeScanner.createInstance();
-            scanner.onUnduplicatedRead = (txt, result) => {alert("Este es tu resultado: ", txt);};
+            scanner.onUnduplicatedRead = (txt, result) => {alert(`Este es tu resultado: ${txt}`);};
             await scanner.show();
         })();
         </script>
